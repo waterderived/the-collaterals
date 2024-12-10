@@ -138,3 +138,19 @@ function closeNav() {
     document.getElementById("mySidebar").style.height = "0%";
     // div.classList.remove('hidden'); //reappear sidebar button
 }
+
+
+/* --- STORY OVERLAY --- */
+function openContact() {
+  document.getElementById("overlayContact").style.height = "100%";
+  document.getElementById("overlayContact").style.opacity = "100%";
+}
+
+function closeContact() {
+  document.getElementById("overlayContact").style.height = "0%";
+  document.getElementById("overlayContact").style.opacity = "0%";
+  // div.classList.remove('hidden'); //reappear sidebar button
+}
+
+
+

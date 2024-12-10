@@ -8,15 +8,15 @@
     <title>the collaterals</title>
     <article id="learning-resources" data-index-number="000D" data-parent-system="index"></article>
     <!--main css and js for editing-->
-    <!--<link rel="stylesheet" type="text/css"
+    <link rel="stylesheet" type="text/css"
         href="C:\Users\nicol\Dropbox (Personal)\MISC\creation\code\collaterals-ir-ed\style.css">
     <script defer
-        src="C:\Users\nicol\Dropbox (Personal)\MISC\creation\code\collaterals-ir-ed\script.js"></script>-->
+        src="C:\Users\nicol\Dropbox (Personal)\MISC\creation\code\collaterals-ir-ed\script.js"></script>
     <!--main css and js-->
-    <link rel="stylesheet" type="text/css"
+    <!--<link rel="stylesheet" type="text/css"
         href="https://thecollaterals.netlify.app/style.css">
     <script defer
-        src="https://thecollaterals.netlify.app/script.js"></script>
+        src="https://thecollaterals.netlify.app/script.js"></script>-->
     <!--jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!--nav bar js-->
@@ -27,9 +27,9 @@
     <!--loader-->
     <div class="loader-container">
         <img class="loader-bg"
-            src="C:\Users\nicol\Dropbox (Personal)\MISC\creation\code\collaterals-ir-ed\images\image-loader-ticks.png">
+            src="https://thecollaterals.netlify.app/images/image-loader-ticks.png">
         <img class="loader"
-            src="C:\Users\nicol\Dropbox (Personal)\MISC\creation\code\collaterals-ir-ed\images\image-loader-ray.png">
+            src="https://thecollaterals.netlify.app/images/image-loader-ray.png">
     </div>
     <section class="darkBg" id="page-content">
         <!--hero-->
@@ -54,11 +54,11 @@
                         </a>
                     </div>
                     <div class="navbar-item">
-                        <a class="btn" href="#">
+                        <a class="btn" href="https://thecollaterals.netlify.app/learning-resources/">
                             Resources
                         </a>
                     </div>
-                    <div class="navbar-item">
+                    <div class="navbar-item" onclick="openContact()">
                         <a class="btn" href="#">
                             Contact
                         </a>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </header>
-            <div class="title-block">
+            <div class="title-block nav-pages">
                 <div class="title-section__title">
                     Select Resources
                 </div>
@@ -93,6 +93,14 @@
                     </a>
                     <p class="resource-description">
                         This is a podcast
+                    </p>
+                </div>
+                <div class="resource t-textbook">
+                    <a href="#" class="resource-title">
+                        Handbook of Interventional Radiology Procedures
+                    </a>
+                    <p class="resource-description">
+                        A book of
                     </p>
                 </div>
                 <div class="resource t-www">
@@ -158,22 +166,19 @@
             </div>
         </div>
         <!--end of sidebar-->
-        <!--close button-->
-        <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
-        <!--svg overlay-->
-        <div class="overlay-dark">
-            <svg viewBox="0 0 1000 1000">
-                <path d=""M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
-            </svg>
+        <!--static contact overlay-->
+        <div class="sidebar-frame" id="overlayContact">
+            <a href="javascript:void(0)" class="close-button" onclick="closeContact()">&times;</a>
+            <div class="sidebar-element">
+                <h2>Let's talk</h2>
+                <p>Please reach out at <a href="mailto:nicole.jisoo@gmail.com">nicole [dot] jisoo [at] gmail [dot] com</a> with inquiries.</p>
+            </div>
         </div>
-        <div class="overlay-story">
-            
-        </div>
-        <!--end of svg overlay-->
+        <!--end of story overlay-->
         <footer>
             <div class="footer-links">
                 <div class="mark-left">
-                    <p>Copyright © Nicole Jisoo Kim 2024 | <a href="mailto:nicole.jisoo@gmail.com">email</a></p>
+                    <p>Copyright © Nicole Jisoo Kim 2024</p>
                 </div>
             </div>
         </footer>
@@ -231,7 +236,6 @@ for (var i = 0; i < btns.length; i++) {
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
 <script>
     const loaderContainer = document.querySelector('.loader-container')
     const pageContent = document.querySelector('#page-content')
@@ -240,7 +244,6 @@ for (var i = 0; i < btns.length; i++) {
         loaderContainer.classList.add('hidden')
         pageContent.classList.add('visible')
     })
-
 </script>
 
 </html>

@@ -541,7 +541,7 @@ a:hover {
 .sidebar-frame .close-button {
     position: absolute;
     top: 10px;
-    right: 24px;
+    right: 36px;
     font-size: 32px;
     text-decoration: none;
     color: var(--tx-muted);
@@ -577,6 +577,39 @@ a:hover {
 
 @media screen and (max-height: 450px) {
     .sidebar-frame {padding-top: 16px}
+}
+
+/* --- CONTACT OVERLAY --- */
+
+#overlayContact.sidebar-frame {
+    background: var(--bg1);
+    width: 100vw;
+    height: 0;
+    overflow-y: hidden;
+    opacity: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#overlayContact.sidebar-frame .sidebar-element {
+    top: 64px;
+    width: 70%;
+    height: 75%;
+    overflow-y: hidden;
+    align-self: center;
+    animation: ease-in-out 0.5s;
+    animation-delay: 1s;
+}
+
+#overlayContact.sidebar-frame h2 {
+    font-weight: 400;
+    margin-bottom: 64px;
+}
+
+#overlayContact.sidebar-frame p {
+    font-size: 1em;
+    color: var(--oc-monolight-300)
 }
 
 /* header */
@@ -810,6 +843,10 @@ h1.home-hero__title {
     align-content: center;
     margin: calc(100px + 6vw) 0 64px 0;
     height: max-content;
+}
+
+.title-block.nav-pages {
+    margin-bottom: 32px;
 }
 
 .title-section__title {
@@ -1447,27 +1484,6 @@ button.btn-margin-circle {
     align-self: center;
     align-content: center;
     padding: 0;
-}
-
-/* --- OVERLAY PAGES --- */
-.overlay-dark {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.overlay-dark svg path {
-    fill: var(--oc-monolight-200);
-}
-
-#overlay-toggle-story {
-    position: absolute;
-    top: 0;
-    right: 0;
-    
 }
 
 /*-- POPUP WINDOWS --*/
