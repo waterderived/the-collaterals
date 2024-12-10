@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the collaterals</title>
+    <article id="learning-resources" data-index-number="000D" data-parent-system="index"></article>
+    <!--main css-->
+    <link rel="stylesheet" type="text/css"
+        href="C:\Users\nicol\Dropbox (Personal)\MISC\creation\code\cr - collaterals ir ed site\style.css">
+    <!--main js-->
+    <script defer
+        src="C:\Users\nicol\Dropbox (Personal)\MISC\creation\code\cr - collaterals ir ed site\script.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--nav bar js-->
+    <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
+</head>
+
+<body onload="filterSelection('all')">
+    <!--loader-->
+    <div class="loader-container">
+        <img class="loader-bg"
+            src="C:\Users\nicol\Dropbox (Personal)\MISC\creation\code\cr - collaterals ir ed site\images\image-loader-ticks.png">
+        <img class="loader"
+            src="C:\Users\nicol\Dropbox (Personal)\MISC\creation\code\cr - collaterals ir ed site\images\image-loader-ray.png">
+    </div>
+    <section class="darkBg" id="page-content">
+        <!--hero-->
+        <section class="title-section metapage">
+            <header class="navbar2 header header-visible">
+                <div class="header-title navbar-text-hero">
+                    <a href="#">
+                        <!--<img src="C:\Users\nicol\Dropbox (Brown)\MISC\creations\col laterals\collaterals-cardsite-sample\collaterals_logo_mini.png">-->
+                        <img
+                            src="C:\Users\nicol\Dropbox (Brown)\MISC\creations\col laterals\collaterals-cardsite-sample\images\navbar-title-svg-white.svg">
+                    </a>
+                </div>
+                <div class="navbar-container">
+                    <div class="navbar-item">
+                        <a class="btn" href="#">
+                            Learn
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="btn" href="#">
+                            Story
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="btn" href="file:///C:/Users/nicol/Dropbox%20(Personal)/MISC/creation/code/cr%20-%20collaterals%20ir%20ed%20site/learning-resources.html">
+                            Resources
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <a class="btn" href="#">
+                            Contact
+                        </a>
+                    </div>
+                    <div class="navbar-item">
+                        <button class="sidebar-open-button" onclick="openNav()">&#9776</button>
+                        <!--<button class="sidebar-open-button-open" onclick="closeNav()">&#9776</button>-->
+                    </div>
+                </div>
+            </header>
+            <div class="title-block">
+                <div class="title-section__title">
+                    Resources
+                </div>
+            </div>
+        </section>
+        <section class="article-section-body">
+            <div class="article-section__filters">
+                <div class="filter-button__container" id="resourceFilterContainer">
+                    <button class="filter-button selected" onclick="filterSelection('all')">All</button>
+                    <button class="filter-button" onclick="filterSelection('t-www')">Website</button>
+                    <button class="filter-button" onclick="filterSelection('t-audio')">Audiovisual</button>
+                    <button class="filter-button" onclick="filterSelection('t-pub')">Publication</button>
+                    <button class="filter-button" onclick="filterSelection('t-community')">Community</button>
+                    <button class="filter-button" onclick="filterSelection('t-textbook')">Textbook</button>
+                </div>
+            </div>
+            <div class="resources__container">
+                <div class="resource t-www t-audio">
+                    <a href="https://www.backtable.com/shows/vi" class="resource-title">
+                        BackTable Podcast
+                    </a>
+                    <p class="resource-description">
+                        This is a podcast
+                    </p>
+                </div>
+                <div class="resource t-www">
+                    <a href="https://www.learnir.org/" class="resource-title">
+                        Learn IR
+                    </a>
+                    <p class="resource-description">
+                        An educational site founded by Dr. Eric J. Keller and Dr. Lawrence Hofmann intended to promote learning and staying up to date on IR procedures through an approachable and structured digital environment. 
+                    </p>
+                </div>
+                <div class="resource t-www">
+                    <a href="https://radiopaedia.org/" class="resource-title">
+                        Radiopaedia
+                    </a>
+                    <p class="resource-description">
+                        An online, community-edited radiology resource consisting of articles, cases, and variably priced courses pertaining to radiological knowledge and practice.
+                    </p>
+                </div>
+                <div class="resource t-www">
+                    <a href="https://www.stepwards.com/?page_id=21222" class="resource-title">
+                        Stepwards
+                    </a>
+                    <p class="resource-description">
+                        A site created with the goal of bringing together free, centralized content useful to medical students in preparation for Step exams, in medical school studies, and on the wards. This site provides a primer for new IR trainees as well as guide on the fundamentals of IR equipment, technical skills, and procedures.
+                    </p>
+                </div>
+                <div class="resource t-www">
+                    <a href="https://www.teachingir.com/" class="resource-title">
+                        Teaching IR
+                    </a>
+                    <p class="resource-description">
+                        An educational site by Jeff Elbich consisting of interventional radiology lecture slides and boards-style interactive questions. 
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!--static sidebar-->
+        <div class="sidebar-frame" id="mySidebar">
+            <!--sidebar component - can switch out for another-->
+            <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+            <div class="sidebar-element">
+                <a href="#">
+                    story
+                </a>
+                <a href="#">
+                    learn
+                </a>
+                <a href="#">
+                    references
+                </a>
+                <a href="#">
+                    contact
+                </a>
+            </div>
+        </div>
+        <!--end of sidebar-->
+        <footer>
+            <div class="footer-links">
+                <div class="mark-left">
+                    <p>© 2024 Nicole Jisoo Kim | <a href="mailto:nicole.jisoo@gmail.com">email</a></p>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script>
+        filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("resource");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("resourceFilterContainer");
+var btns = btnContainer.getElementsByClassName("filter-button");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("selected");
+    current[0].className = current[0].className.replace(" selected", "");
+    this.className += " selected";
+  });
+}
+    </script>
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+    const loaderContainer = document.querySelector('.loader-container')
+    const pageContent = document.querySelector('#page-content')
+
+    window.addEventListener('load', () => {
+        loaderContainer.classList.add('hidden')
+        pageContent.classList.add('visible')
+    })
+
+</script>
+
+</html>
