@@ -1449,6 +1449,27 @@ button.btn-margin-circle {
     padding: 0;
 }
 
+/* --- OVERLAY PAGES --- */
+.overlay-dark {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.overlay-dark svg path {
+    fill: var(--oc-monolight-200);
+}
+
+#overlay-toggle-story {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+}
+
 /*-- POPUP WINDOWS --*/
 
 dialog::backdrop {
