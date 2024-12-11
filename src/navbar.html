@@ -1,0 +1,100 @@
+
+<link rel="stylesheet" type="text/css" href="C:\Users\nicol\Dropbox (Personal)\MISC\creation\code\collaterals-ir-ed\style.css">
+<script defer src="C:\Users\nicol\Dropbox (Personal)\MISC\creation\code\collaterals-ir-ed\script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<div class="header-title navbar-text-hero">
+    <a href="#">
+        <img
+            src="C:\Users\nicol\Dropbox (Brown)\MISC\creations\col laterals\collaterals-cardsite-sample\images\navbar-title-svg-white.svg" target="_top">
+    </a>
+</div>
+<div class="navbar-container">
+    <div class="navbar-item">
+        <a class="btn" href="#">
+            Learn
+        </a>
+    </div>
+    <div class="navbar-item">
+        <a class="btn" href="#">
+            Story
+        </a>
+    </div>
+    <div class="navbar-item">
+        <a class="btn" href="https://thecollaterals.netlify.app/learning-resources/">
+            Resources
+        </a>
+    </div>
+    <div class="navbar-item" onclick="openContact()">
+        <a class="btn" href="#">
+            Contact
+        </a>
+    </div>
+    <div class="navbar-item">
+        <button class="sidebar-open-button" onclick="openNav()">&#9776</button>
+        <!--<button class="sidebar-open-button-open" onclick="closeNav()">&#9776</button>-->
+    </div>
+</div>
+
+<!--SOME SCRIPTS IN BODY-->
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("resource");
+        if (c == "all") c = "";
+        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+        for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+    }
+
+    // Show filtered elements
+    function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+
+    // Hide elements that are not selected
+    function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current control button (highlight it)
+    var btnContainer = document.getElementById("resourceFilterContainer");
+    var btns = btnContainer.getElementsByClassName("filter-button");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("selected");
+            current[0].className = current[0].className.replace(" selected", "");
+            this.className += " selected";
+        });
+    }
+</script>
+
+<!--SCRIPTS-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    const loaderContainer = document.querySelector('.loader-container')
+    const pageContent = document.querySelector('#page-content')
+
+    window.addEventListener('load', () => {
+        loaderContainer.classList.add('hidden')
+        pageContent.classList.add('visible')
+    })
+</script>
