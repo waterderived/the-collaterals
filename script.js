@@ -1,3 +1,4 @@
+/*--- MODALS & POPUPS ---*/
 // buttons - open and close specific modals aka popups
 
 let openPopupButton = document.querySelectorAll("[data-open-modal]")
@@ -144,13 +145,12 @@ function closeNav() {
 function openContact() {
   document.getElementById("overlayContact").style.height = "100%";
   document.getElementById("overlayContact").style.opacity = "100%";
+  document.body.style.overflowY = "hidden";
 }
 
 function closeContact() {
   document.getElementById("overlayContact").style.height = "0%";
   document.getElementById("overlayContact").style.opacity = "0%";
+  document.body.style.overflowY = "scroll";
   // div.classList.remove('hidden'); //reappear sidebar button
 }
-
-
-
